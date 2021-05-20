@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using aads.LinkedList;
 using aads.DoubleLinkedList;
 using aads.BinarySearchTree;
+using aads.Sortings.QSort;
 
 namespace aads
 {
@@ -13,7 +14,7 @@ namespace aads
     {
         static void Main(string[] args)
         {
-            var list = new BinarySearchTree.Example();
+            var temp = new Sortings.MergeSort.Example();
             Console.ReadKey();
         }
     }

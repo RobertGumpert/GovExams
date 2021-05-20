@@ -86,9 +86,9 @@ namespace aads.BinarySearchTree
                     }
                     if (child.Right != null && child.Left != null)
                     {
-                        //parent.Right = child.Right;
-                        Item node = Receive(child);
-                        parent.Right = node;
+                        parent.Right = child.Right;
+                        Item minimumOfRightFork = GetMinimum(child.Right);
+                        minimumOfRightFork.Left = child.Left;
                         return;
                     }
                 }
@@ -115,9 +115,9 @@ namespace aads.BinarySearchTree
                     }
                     if (child.Right != null && child.Left == null)
                     {
-                        // parent.Left = child.Right;
-                        Item node = Receive(child);
-                        parent.Left = node;
+                        parent.Left = child.Left;
+                        Item minimumOfRightFork = GetMinimum(child.Right);
+                        minimumOfRightFork.Left = child.Left;
                         return;
                     }
                 }
@@ -128,30 +128,85 @@ namespace aads.BinarySearchTree
             }
         }
 
-        public Item Receive(Item parent)
+       
+        public Item GetMinimum(Item node)
         {
-            Item parentNode = parent;
-            Item heirNode = parent;
-            Item currentNode = parent.Right;
-            while (currentNode != null) 
+            Item left = node.Left;
+            while (true)
             {
-                parentNode = heirNode;
-                heirNode = currentNode;
-                currentNode = currentNode.Left;
+                if (left != null)
+                {
+                    return left;
+                }
+                left = left.Left;
             }
-            if (heirNode != parent.Right)
-            { 
-                parentNode.Left = heirNode.Right;
-                heirNode.Right = parent.Right;
-            }
-            return heirNode;
         }
 
-
-        public Item R(Item parent)
+        public Item GetMinimum()
         {
-            Item node = new Item(parent.Right.Value, parent.Right.DeepLevel-1);
+            Item left = root.Left;
+            while (true)
+            {
+                if (left != null)
+                {
+                    return left;
+                }
+                left = left.Left;
+            }
         }
-        
+
+
+        public void Print()
+        { 
+            Stack<Item> tempStack = new Stack<Item>();
+            tempStack.Push(root);
+            int distanceBetweenLineElements = 32; 
+            bool isRowEmpty = false;
+            String separator = "-----------------------------------------------------------------";
+            Console.Write(separator + "\n");
+            while (isRowEmpty == false)
+            {
+                // складываем все элементы в строке в стэк.
+                Stack<Item> elementsInLineStack = new Stack<Item>();
+                isRowEmpty = true;
+                for (int j = 0; j < distanceBetweenLineElements; j++)
+                {
+                    Console.Write(".");
+                }
+                while (tempStack.Count() != 0)
+                { 
+                    Item nextElementFromLine = tempStack.Pop(); 
+                    if (nextElementFromLine != null)
+                    {
+                        Console.Write(nextElementFromLine.Value); 
+                        elementsInLineStack.Push(nextElementFromLine.Left); 
+                        elementsInLineStack.Push(nextElementFromLine.Right);
+                        if (nextElementFromLine.Left != null || nextElementFromLine.Right != null)
+                        { 
+                            isRowEmpty = false;
+                        }
+                    }
+                    else
+                    {
+                        Console.Write("__");
+                        // left
+                        elementsInLineStack.Push(null);
+                        // right
+                        elementsInLineStack.Push(null);
+                    }
+                    for (int j = 0; j < distanceBetweenLineElements * 2 - 2; j++)
+                    {
+                        Console.Write(".");
+                    }
+                }
+                Console.Write("\n");
+                distanceBetweenLineElements /= 2;
+                while (elementsInLineStack.Count() != 0)
+                { 
+                    tempStack.Push(elementsInLineStack.Pop());
+                }
+            }
+            Console.Write(separator + "\n");
+        }
     }
 }

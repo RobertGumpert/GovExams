@@ -21,9 +21,16 @@ namespace aads.BinarySearchTree
             tree.Insert(45);
             tree.Insert(47);
             tree.Insert(32);
+            tree.Print();
 
             tree.Remove(48);
+            tree.Print();
+
+            tree.Remove(59);
+            tree.Print();
+
             //tree.Print(tree.Root, 0);
+            Console.WriteLine();
         }
     }
 }
