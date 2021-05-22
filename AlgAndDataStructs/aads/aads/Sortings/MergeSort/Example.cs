@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace aads.Sortings.MergeSort
 {
-    public class Example
+    public class Example : ISortExample
     {
         public Example()
         {
-            int[] arr = new int[] { 1, 4, 7, 3, 5, 0, 9, 12};
-            
-            var qsort = new Sort(arr);
-         
+            int[] arr = new int[] { 1, 4, 7, 3, 5, 0, 9, 12 };
+            DoPrint(arr);
+            var sort = new Sort(arr);
+            DoPrint(arr);
         }
 
         private void DoPrint(int[] arr)
@@ -24,6 +24,5 @@ namespace aads.Sortings.MergeSort
             }
             Console.Write("\n");
         }
-
     }
 }

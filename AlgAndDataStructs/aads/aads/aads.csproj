@@ -53,6 +53,11 @@
     <Compile Include="LinkedList\MyLinkedList.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sortings\CountingSort\Example.cs" />
+    <Compile Include="Sortings\CountingSort\Sort.cs" />
+    <Compile Include="Sortings\GnomeSort\Example.cs" />
+    <Compile Include="Sortings\GnomeSort\Sort.cs" />
+    <Compile Include="Sortings\ISortExample.cs" />
     <Compile Include="Sortings\MergeSort\Example.cs" />
     <Compile Include="Sortings\MergeSort\Sort.cs" />
     <Compile Include="Sortings\QSort\Example.cs" />

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace aads.Sortings.QSort
+namespace aads.Sortings.GnomeSort
 {
     public class Example : ISortExample
     {

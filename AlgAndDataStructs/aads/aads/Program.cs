@@ -14,7 +14,20 @@ namespace aads
     {
         static void Main(string[] args)
         {
-            var temp = new Sortings.MergeSort.Example();
+            Sortings.ISortExample s;
+            //
+            Console.Write("Gnome\n");
+            s = new Sortings.GnomeSort.Example();
+            //
+            Console.Write("Fast\n");
+            s = new Sortings.QSort.Example();
+            //
+            Console.Write("Merge\n");
+            s = new Sortings.MergeSort.Example();
+            //
+            Console.Write("Merge\n");
+            s = new Sortings.CountingSort.Example();
+
             Console.ReadKey();
         }
     }
