@@ -8,6 +8,7 @@ namespace aads.Graph.MatrixGraph
 {
     public class Example
     {
+        int from = 0;
         // 0:---------------------------[0]
         //                           *       *
         // 1:------------------[1]--------------[2]
@@ -60,13 +61,13 @@ namespace aads.Graph.MatrixGraph
             //          -> ( return to vertex:0 )
             //                      -> ( exit from vertex:0 ) ->
             Console.Write("\nTrasversal deep:\n");
-            g.TraversalDeep(0);
+            g.TraversalDeep(from);
         }
 
         private void Width(MyGraph g)
         {
             Console.Write("\nTrasversal width:\n");
-            g.TraversalWidth(3);
+            g.TraversalWidth(from);
         }
 
     }

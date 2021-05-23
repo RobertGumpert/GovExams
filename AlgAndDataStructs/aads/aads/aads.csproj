@@ -64,6 +64,8 @@
     <Compile Include="Sortings\MergeSort\Sort.cs" />
     <Compile Include="Sortings\QSort\Example.cs" />
     <Compile Include="Sortings\QSort\Sort.cs" />
+    <Compile Include="Sortings\RadixSort\Example.cs" />
+    <Compile Include="Sortings\RadixSort\Sort.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

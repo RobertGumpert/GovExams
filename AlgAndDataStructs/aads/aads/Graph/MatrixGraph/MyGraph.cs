@@ -58,21 +58,6 @@ namespace aads.Graph.MatrixGraph
             Console.Write("( exit from vertex:" + from + " ) -> ");
         }
 
-        /*
-        private void TraversalWidth(int from)
-        {
-            Stack<int> tempStack = GetVertexNeighbors(from);
-            bool rowIsEmpty = false;
-            while (rowIsEmpty == false)
-            {
-                Stack<int> elementsInLineStack = new Stack<int>();
-                rowIsEmpty = true;
-                Console.Write("[ from -> ");
-                
-            }
-        }
-        */
-
         public void TraversalWidth(int from)
         {
             HashSet<int> buffer = new HashSet<int>();

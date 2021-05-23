@@ -25,8 +25,11 @@ namespace aads
             Console.Write("Merge\n");
             s = new Sortings.MergeSort.Example();
             //
-            Console.Write("Merge\n");
+            Console.Write("Count\n");
             s = new Sortings.CountingSort.Example();
+            //
+            Console.Write("Radix\n");
+            s = new Sortings.RadixSort.Example();
             //
             var g = new Graph.MatrixGraph.Example();
             //
