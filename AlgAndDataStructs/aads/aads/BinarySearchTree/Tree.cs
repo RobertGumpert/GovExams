@@ -156,7 +156,7 @@ namespace aads.BinarySearchTree
         }
 
 
-        public void Print()
+        public void PrintAsWidth()
         { 
             Stack<Item> tempStack = new Stack<Item>();
             tempStack.Push(root);

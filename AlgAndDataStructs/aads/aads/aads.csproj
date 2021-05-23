@@ -48,6 +48,8 @@
     <Compile Include="DoubleLinkedList\Example.cs" />
     <Compile Include="DoubleLinkedList\MyDoubleLinkedList.cs" />
     <Compile Include="DoubleLinkedList\Item.cs" />
+    <Compile Include="Graph\MatrixGraph\Example.cs" />
+    <Compile Include="Graph\MatrixGraph\MyGraph.cs" />
     <Compile Include="LinkedList\Example.cs" />
     <Compile Include="LinkedList\Item.cs" />
     <Compile Include="LinkedList\MyLinkedList.cs" />

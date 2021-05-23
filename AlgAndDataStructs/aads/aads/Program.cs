@@ -27,7 +27,9 @@ namespace aads
             //
             Console.Write("Merge\n");
             s = new Sortings.CountingSort.Example();
-
+            //
+            var g = new Graph.MatrixGraph.Example();
+            //
             Console.ReadKey();
         }
     }
