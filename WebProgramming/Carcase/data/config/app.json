@@ -1,6 +1,7 @@
 {
   "app" : {
-    "port": ":54000"
+    "port": ":54000",
+    "pagination_size": 20
   },
   "postgres" : {
     "username": "postgres",

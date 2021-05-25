@@ -3,7 +3,7 @@ package controller
 import (
 	"github.com/gin-gonic/gin"
 	"net/http"
-	"webproject/src/controller/templateModel"
+	"webproject/src/model/templateModel"
 	"webproject/src/service"
 )
 

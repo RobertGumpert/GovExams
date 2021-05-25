@@ -18,7 +18,7 @@ func main() {
 	//
 	configs := staticConfigs.Read()
 	ormFacade := getOrm(configs)
-	daoFacade := dao.NewDAO(ormFacade.GetOrm(orm.Postgres))
+	daoFacade := dao.NewDAO(ormFacade.GetOrm(orm.Postgres), configs)
 	serviceFacade := service.NewService(daoFacade, configs)
 	_ = controller.NewController(engine, serviceFacade)
 	//

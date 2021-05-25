@@ -1,0 +1,55 @@
+html {
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #f0f3fa;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.content-container {
+    height: auto;
+    width: 100%;
+    margin-top: 10%;
+}
+
+.user-list-container{
+    height: 100%;
+    margin-top: 4%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.user-container{
+    height: 100%;
+    border: 2px solid white;
+    border-radius: 30px;
+    background-color: white;
+    margin-top: 5%;
+}
+
+.field-container {
+    height: 100%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.field-title {
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.field-value {
+    border: 1px solid #e3e3e3;
+    border-radius: 15px;
+    background-color: white;
+    height: 100%;
+    margin-bottom: 5%;
+    padding-left: 2%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}

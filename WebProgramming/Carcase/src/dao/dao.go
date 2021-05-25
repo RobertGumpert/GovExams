@@ -1,15 +1,18 @@
 package dao
 
-import "webproject/src/orm"
+import (
+	"webproject/config/staticConfigs"
+	"webproject/src/orm"
+)
 
 type DAO struct {
 	User    *userDao
 	Article *articleDao
 }
 
-func NewDAO(db orm.IOrm) *DAO {
+func NewDAO(db orm.IOrm, configs *staticConfigs.Configs) *DAO {
 	return &DAO{
-		User:    newUserDao(db),
+		User:    newUserDao(db, configs.App.PaginationSize),
 		Article: newArticleDao(db),
 	}
 }

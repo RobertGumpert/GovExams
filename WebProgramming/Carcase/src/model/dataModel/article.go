@@ -1,8 +1,8 @@
-package model
+package dataModel
 
 import "gorm.io/gorm"
 
-type ArticleDataModel struct {
+type Article struct {
 	gorm.Model
 	UserID uint
 	Title string `gorm:"not null;"`

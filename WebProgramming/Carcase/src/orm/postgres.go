@@ -5,7 +5,7 @@ import (
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"log"
-	"webproject/src/model"
+	"webproject/src/model/dataModel"
 )
 
 type PostgreSQL struct {
@@ -48,8 +48,8 @@ func (p *PostgreSQL) Migration(dbType DBType) error {
 	}()
 
 	if err := db.AutoMigrate(
-		&model.UserDataModel{},
-		&model.ArticleDataModel{},
+		&dataModel.User{},
+		&dataModel.Article{},
 	); err != nil {
 		db.Rollback()
 		return err
