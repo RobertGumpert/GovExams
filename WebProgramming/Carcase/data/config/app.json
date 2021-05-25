@@ -1,0 +1,12 @@
+{
+  "app" : {
+    "port": ":54000"
+  },
+  "postgres" : {
+    "username": "postgres",
+    "password": "toster123",
+    "port": "5432",
+    "db_name": "gos",
+    "ssl": "disable"
+  }
+}
