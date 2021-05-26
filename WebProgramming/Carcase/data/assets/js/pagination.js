@@ -15,6 +15,10 @@ window.onload = () => {
         if (request.status !== 200) {
 
         } else {
+            //
+            var re = new RegExp("ab+c");
+
+            //
             const json = JSON.parse(request.response);
             lastSkip = json["last_skip"];
             json["users"].forEach((user) => {
@@ -25,6 +29,16 @@ window.onload = () => {
         }
     });
 };
+
+function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+function validateTelephone(telephone) {
+    const re = /^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$/;
+    return re.test(String(telephone).toLowerCase());
+}
 
 function createHTTML(json) {
     return '<div class="user-container"> ' +
